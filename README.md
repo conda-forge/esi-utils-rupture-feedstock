@@ -1,11 +1,11 @@
-About esi-utils-rupture
-=======================
+About esi-utils-rupture-feedstock
+=================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/esi-utils-rupture-feedstock/blob/main/LICENSE.txt)
 
 Home: https://code.usgs.gov/ghsc/esi/esi-utils-rupture
 
 Package license: Unlicense
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/esi-utils-rupture-feedstock/blob/main/LICENSE.txt)
 
 Summary: USGS Earthquake Impact Utilities for Ruptures
 
