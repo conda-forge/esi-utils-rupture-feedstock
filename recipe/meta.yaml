@@ -16,10 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.8,<3.11
+    - setuptools >=61.0
+    - setuptools-scm >=3.4
     - pip
   run:
-    - python >=3.8
+    - python >=3.8,<3.11
     - decorator >=5.1
     - defusedxml >=0.7.1
     - esi-extern-openquake >=1.0.0
