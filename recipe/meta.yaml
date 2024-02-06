@@ -1,5 +1,5 @@
 {% set name = "esi-utils-rupture" %}
-{% set version = "1.0.3" %}
+{% set version = "1.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/esi-utils-rupture-{{ version }}.tar.gz
-  sha256: 829c578e6ba60b06a379dab7b8fafea4dc95ffb9908fa544c0b92e27b0acf38e
+  sha256: 44c049f0105923fbf98726fe0c6d4fcc10141b531d3604dffc2abfff4132011e
 
 build:
   noarch: python
@@ -28,7 +28,7 @@ requirements:
     - esi-utils-time >=1.0.0
     - esi-utils-vectors >=1.0.0
     - h5py >=3.7
-    - numpy >=1.21
+    - numpy >=1.21,<2.0.0
     - obspy >=1.3.0
     - openquake.engine >=3.14
     - pandas >=1.0
