@@ -1,13 +1,13 @@
 {% set name = "esi-utils-rupture" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/esi-utils-rupture-{{ version }}.tar.gz
-  sha256: 44c049f0105923fbf98726fe0c6d4fcc10141b531d3604dffc2abfff4132011e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: e78befcb3718b89bf26c76b0a96e1add847dca152af65c571f64dee534da0386
 
 build:
   noarch: python
