@@ -1,5 +1,5 @@
 {% set name = "esi-utils-rupture" %}
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: e78befcb3718b89bf26c76b0a96e1add847dca152af65c571f64dee534da0386
+  sha256: d3057c29353968a7ee90cce36f682916d4faa5f6302c9d19a90058a304321ea3
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.8,<3.11
+    - python >=3.8
     - setuptools >=61.0
     - setuptools-scm >=3.4
     - pip
   run:
-    - python >=3.8,<3.11
+    - numba
+    - python >=3.8
     - decorator >=5.1
     - defusedxml >=0.7.1
     - esi-extern-openquake >=1.0.0
