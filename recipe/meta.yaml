@@ -1,6 +1,6 @@
 {% set python_min = "3.11" %}
 {% set name = "esi-utils-rupture" %}
-{% set version = "1.0.8" %}
+{% set version = "1.0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c91818132574c83740c265c6cfb1e325f4e75f678a3973ebbd15434826e3e2c9
+  sha256: bc50124e2e54569d2578c461b9dc50d19b4b6221debdce38848830928cee4b4c
 
 build:
   noarch: python
@@ -22,6 +22,8 @@ requirements:
     - setuptools-scm >=3.4
     - pip
   run:
+    - h3-py
+    - setuptools <82
     - numba
     - python >={{ python_min }}
     - decorator >=5.1
